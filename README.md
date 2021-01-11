@@ -3,6 +3,11 @@
 Ceci est un projet de site vitrine pour la societé VAKOM Lens.
 Projet réalisé dans le cadre de la formation Dev-Web Popschool Lens (Titre pro nv 4)
 
+
+# Maquette
+
+https://www.figma.com/file/YikBNuYZSQA6pZ4An66Wtc/VAKOM-Mockup?node-id=0%3A1
+
 # BDD
 ## Site 
 (Modularité du site)
