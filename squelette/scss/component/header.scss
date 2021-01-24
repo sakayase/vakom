@@ -1,0 +1,16 @@
+header {
+    background-image: url("../../img/Espace\ Réunion.jpg");
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size:cover;
+    display: flex;
+    flex-direction: column;
+
+    &--navbar {
+
+    }
+
+    &--logo{
+        background-color: orangered;
+    }
+}
