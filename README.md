@@ -64,3 +64,9 @@ https://fonts.google.com/specimen/Lora
 - user (uniquement commentaire)
 - id
 - (id article)
+
+# Avancement
+
+Squelette html OK
+Style : Pas encore décidé
+Symfony En cours
