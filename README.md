@@ -32,16 +32,14 @@ https://fonts.google.com/specimen/Lora
 ## Site 
 (Modularité du site)
 
-- Tarifs (img agenda formation)
+- Tarifs (img agenda formation) [img] ?
+- Livrets d'acceuil etc..   [img] ?
 - Type de formation
 - Avis client
 - Client
 - Indicateur de satisfaction
-- Livrets d'acceuil etc..
 
 ## Form
-### Personne
-[Message many to one Personne]
 - nom   
 - prenom    
 - mail    
