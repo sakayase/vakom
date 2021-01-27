@@ -100,12 +100,12 @@ class Form
         return $this;
     }
 
-    public function getObjet(): ?array
+    public function getObjet(): ?string
     {
         return $this->objet;
     }
 
-    public function setObjet(array $objet): self
+    public function setObjet(string $objet): self
     {
         $this->objet = $objet;
 

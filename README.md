@@ -69,4 +69,8 @@ https://fonts.google.com/specimen/Lora
 
 Squelette html OK
 Style : Pas encore décidé
-Symfony En cours
+
+Symfony : En cours de dev
+Entities OK
+CRUD OK
+Templates nOK (Dans article faire apparaitre la liste des commentaires et dans commentaires faire apparaitre l'id/le titre de l'article commenté)

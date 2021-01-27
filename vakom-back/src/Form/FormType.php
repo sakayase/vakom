@@ -3,10 +3,9 @@
 namespace App\Form;
 
 use App\Entity\Form;
-use App\Entity\Category;
-use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
 class FormType extends AbstractType
@@ -20,8 +19,14 @@ class FormType extends AbstractType
             ->add('societe')
             ->add('objet', ChoiceType::class, [
                 'choices' => [
-                    'contact' => 'contact',
-                    'reclamation' => 'reclamation',
+                    'Réclamation' => 'Réclamation',
+                    'Contact' => 'Contact',
+                    'Formation' => 'Formation',
+                    'Recrutement' => 'Recrutement',
+                    'Conseil' => 'Conseil',
+                    'Coaching' => 'Coaching',
+                    'Orientation professionnelle' => 'Orientation professionnelle',
+                    'Conférences' => 'Conférences',
                 ],
             ])
             ->add('contenu')
