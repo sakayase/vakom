@@ -20,3 +20,8 @@ Possibilité de rédiger un commentaire obligatoirement lié à un article pour 
 Todo:  
 - Afficher la liste des commentaires liés à chaques articles
 - Ajouter la possibilité de report un commentaire 
+
+## Todo  
+  
+Créer la newsletter qui envoie un mail à chaque article publié
+*(swiftmailer ?)*
