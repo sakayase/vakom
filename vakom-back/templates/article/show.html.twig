@@ -27,12 +27,14 @@
                 <th>Date</th>
                 <td>{{ article.date ? article.date|date('Y-m-d') : '' }}</td>
             </tr>
+            {{ include 'commentaire/show '}}
         </tbody>
     </table>
 
     <a href="{{ path('article_index') }}">back to list</a>
+    {% if is_granted('ROLE_ADMIN') %}
+        <a href="{{ path('article_edit', {'id': article.id}) }}">edit</a>
 
-    <a href="{{ path('article_edit', {'id': article.id}) }}">edit</a>
-
-    {{ include('article/_delete_form.html.twig') }}
+        {{ include('article/_delete_form.html.twig') }}
+    {% endif %}
 {% endblock %}

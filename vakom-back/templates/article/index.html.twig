@@ -1,4 +1,4 @@
-{% extends 'base-2col.html.twig' %}
+{% extends 'base.html.twig' %}
 
 {% block title %}Article index{% endblock %}
 
@@ -16,10 +16,12 @@
             <tr>
                 <th>Id</th>
                 <th>Titre</th>
-                <th>Contenu</th>
+                <th>Vignette</th>
                 <th>Resume</th>
                 <th>Date</th>
-                <th>actions</th>
+                {% if is_granted('ROLE_ADMIN') %}                
+                    <th>actions</th>
+                {% endif %}
             </tr>
         </thead>
         <tbody>
@@ -27,13 +29,19 @@
             <tr>
                 <td>{{ article.id }}</td>
                 <td>{{ article.titre }}</td>
-                <td>{{ article.contenu }}</td>
+                {% if article.vignette is defined %}
+                    <td>{{ article.vignette }}</td>
+                {% else %}
+                    <td> No thumbnail </td>
+                {% endif %}
                 <td>{{ article.resume }}</td>
                 <td>{{ article.date ? article.date|date('Y-m-d') : '' }}</td>
-                <td>
-                    <a href="{{ path('article_show', {'id': article.id}) }}">show</a>
-                    <a href="{{ path('article_edit', {'id': article.id}) }}">edit</a>
-                </td>
+                    <td>
+                        <a href="{{ path('article_show', {'id': article.id}) }}">Lire l'article</a>
+                    {% if is_granted('ROLE_ADMIN') %}
+                        <a href="{{ path('article_edit', {'id': article.id}) }}">edit</a>
+                    {% endif %}
+                    </td>
             </tr>
         {% else %}
             <tr>
@@ -43,5 +51,7 @@
         </tbody>
     </table>
 
-    <a href="{{ path('article_new') }}">Create new</a>
+    {% if is_granted('ROLE_ADMIN') %}
+        <a href="{{ path('article_new') }}">Create new</a>
+    {% endif %}
 {% endblock %}

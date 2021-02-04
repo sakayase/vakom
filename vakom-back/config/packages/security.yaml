@@ -40,4 +40,7 @@ security:
         # Le panel user n'est accessible qu'a l'admin
         - { path: ^/user, roles: ROLE_ADMIN }
         # @todo Le panel article est accessible a tous, mais les methodes DELETE, POST et PUT uniquement à l'admin
+        - { path: ^/article/new$, roles: ROLE_ADMIN }
+        - { path: '^/article/[0-9]+/edit$', roles: ROLE_ADMIN }
+        - { path: '^/article/[0-9]+$', roles: ROLE_ADMIN, methods: DELETE}
         # @todo Le pannel commentaire est accessible a tous, mais les methodes DELETE, POST et PUT uniquement à l'admin

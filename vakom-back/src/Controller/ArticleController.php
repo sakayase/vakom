@@ -24,6 +24,7 @@ class ArticleController extends AbstractController
             'articles' => $articleRepository->findAll(),
         ]);
     }
+    
 
     /**
      * @Route("/new", name="article_new", methods={"GET","POST"})
@@ -53,10 +54,16 @@ class ArticleController extends AbstractController
      */
     public function show(Article $article): Response
     {
+        // dump($article);
+        // $commentaires = $article->getCommentaires();
+        // dump($commentaires);
+        // exit();
+        // Affichage des commentaires, marche pas pour l'instant...
         return $this->render('article/show.html.twig', [
             'article' => $article,
         ]);
     }
+    
 
     /**
      * @Route("/{id}/edit", name="article_edit", methods={"GET","POST"})
