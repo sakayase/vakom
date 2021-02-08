@@ -15,7 +15,7 @@ Articles rédigés par l'user uniquement.
 Affichage publique  
 Todo:  
 - Limiter l'acces aux fonctions d'edition, de création et de suppession pour les utilisateurs non logués.
-- Afficher la liste des commentaires liés à chaques articles (acces a l'entité commentaire dans article)
+- OK: Afficher la liste des commentaires liés à chaques articles (acces a l'entité commentaire dans article)
 
 *Commentaire*  
 Possibilité de rédiger un commentaire obligatoirement lié à un article pour tout les utilisateurs (non logués)  
@@ -28,3 +28,5 @@ Créer la newsletter qui envoie un mail à chaque article publié
 *(swiftmailer ?)*  
   
 Rajouter une thumbnail pour les articles
+
+fixtures
