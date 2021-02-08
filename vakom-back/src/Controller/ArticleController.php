@@ -5,6 +5,7 @@ namespace App\Controller;
 use App\Entity\Article;
 use App\Form\ArticleType;
 use App\Repository\ArticleRepository;
+use App\Repository\CommentaireRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -52,15 +53,15 @@ class ArticleController extends AbstractController
     /**
      * @Route("/{id}", name="article_show", methods={"GET"})
      */
-    public function show(Article $article): Response
+    public function show(Article $article, CommentaireRepository $commentaireRepository): Response
     {
-        // dump($article);
-        // $commentaires = $article->getCommentaires();
-        // dump($commentaires);
-        // exit();
+        $commentaires = $commentaireRepository->findByArticleId($article->getId());
+        // recup un tableau avec les commentaires de l'article sur lequel on est
+
         // Affichage des commentaires, marche pas pour l'instant...
         return $this->render('article/show.html.twig', [
             'article' => $article,
+            'commentaires' => $commentaires,
         ]);
     }
     

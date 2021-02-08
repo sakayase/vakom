@@ -27,7 +27,16 @@
                 <th>Date</th>
                 <td>{{ article.date ? article.date|date('Y-m-d') : '' }}</td>
             </tr>
-            {{ include 'commentaire/show '}}
+            <tr>
+                <th>Commentaires</th>
+                <td>
+                    {% for commentaire in commentaires %}
+                        <b>{{ commentaire.auteur }}</b>
+                        <br>
+                        {{ commentaire.contenu }}
+                    {% endfor %}
+                </td>
+            </tr>
         </tbody>
     </table>
 
