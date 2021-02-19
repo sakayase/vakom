@@ -22,14 +22,11 @@ class CommentaireRepository extends ServiceEntityRepository
     /**
      * @return Commentaire[] Returns an array of Commentaire objects
      */
-    
     public function findByArticleId($id)
     {
-        dump($id);
         return $this->createQueryBuilder('article_id')
             ->andWhere('article_id = :val')
             ->setParameter('val', $id)
-            ->setMaxResults(10)
             ->getQuery()
             ->getResult()
         ;

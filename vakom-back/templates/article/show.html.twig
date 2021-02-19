@@ -29,13 +29,13 @@
             </tr>
             <tr>
                 <th>Commentaires</th>
-                <td>
-                    {% for commentaire in commentaires %}
+                {% for commentaire in commentaires %}
+                    <td>
                         <b>{{ commentaire.auteur }}</b>
                         <br>
                         {{ commentaire.contenu }}
-                    {% endfor %}
-                </td>
+                    </td>
+                {% endfor %}
             </tr>
         </tbody>
     </table>

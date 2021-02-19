@@ -57,8 +57,9 @@ class ArticleController extends AbstractController
     {
         $commentaires = $commentaireRepository->findByArticleId($article->getId());
         // recup un tableau avec les commentaires de l'article sur lequel on est
+        dump($commentaireRepository->findByArticleId($article->getId()));
+        exit();
 
-        // Affichage des commentaires, marche pas pour l'instant...
         return $this->render('article/show.html.twig', [
             'article' => $article,
             'commentaires' => $commentaires,
