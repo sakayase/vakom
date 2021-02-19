@@ -16,20 +16,29 @@ class FormulaireType extends AbstractType
             ->add('nom')
             ->add('mail')
             ->add('ville')
-            ->add('societe')
-            ->add('objet', ChoiceType::class, [
-                'choices' => [
-                    'Réclamation' => 'Réclamation',
-                    'Contact' => 'Contact',
-                    'Formation' => 'Formation',
-                    'Recrutement' => 'Recrutement',
-                    'Conseil' => 'Conseil',
-                    'Coaching' => 'Coaching',
-                    'Orientation professionnelle' => 'Orientation professionnelle',
-                    'Conférences' => 'Conférences',
-                ],
-            ])
-            ->add('contenu')
+            ->add('societe');         
+            if ($options['objet'] != '') {
+                $builder->add('objet', ChoiceType::class, [
+                    'choices' => [
+                        $options['objet'] => $options['objet']
+                    ],
+                    'disabled' => true,
+                ]);
+            } else {
+                $builder->add('objet', ChoiceType::class, [
+                    'choices' => [
+                        'Contact' => 'Contact',
+                        'Réclamation' => 'Réclamation',
+                        'Formation' => 'Formation',
+                        'Recrutement' => 'Recrutement',
+                        'Conseil' => 'Conseil',
+                        'Coaching' => 'Coaching',
+                        'Orientation professionnelle' => 'Orientation professionnelle',
+                        'Conférences' => 'Conférences',
+                    ],
+                ]);
+            }
+            $builder->add('contenu')
         ;
     }
 
@@ -37,6 +46,9 @@ class FormulaireType extends AbstractType
     {
         $resolver->setDefaults([
             'data_class' => Formulaire::class,
+            'objet' => '',
         ]);
     }
 }
+
+

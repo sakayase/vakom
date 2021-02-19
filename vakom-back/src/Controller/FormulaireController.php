@@ -8,10 +8,10 @@ use App\Repository\FormulaireRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpKernel\Exception\HttpException;
 use Symfony\Component\Routing\Annotation\Route;
-
 /**
- * @Route("/formulaire")
+ * @Route("/contact")
  */
 class FormulaireController extends AbstractController
 {
@@ -43,6 +43,48 @@ class FormulaireController extends AbstractController
         }
 
         return $this->render('formulaire/new.html.twig', [
+            'formulaire' => $formulaire,
+            'form' => $form->createView(),
+        ]);
+    }
+
+    /**
+     * @Route("/new/{prestation}", name="formulaire_new_prestation", methods={"GET","POST"})
+     */
+    public function newPrestation(Request $request, String $prestation): Response
+    {
+        $title = '';
+        if ($prestation == 'conseil') {
+            $title = 'Conseil';
+        } elseif ($prestation == 'formation') {
+            $title = 'Formation';
+        } elseif ($prestation == 'recrutement') {
+            $title = 'Recrutement & Évaluation';
+        } elseif ($prestation == 'orientation') {
+            $title = 'Orientation Professionnelle';
+        } elseif ($prestation == 'coaching') {
+            $title = 'Coaching';
+        } elseif ($prestation == 'conference') {
+            $title = 'Conférence';
+        } else {
+            throw new HttpException(400, "{$prestation} n'existe pas");
+        }
+
+        $formulaire = new Formulaire();
+        $form = $this->createForm(FormulaireType::class, $formulaire, array('objet' => $title));
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $entityManager = $this->getDoctrine()->getManager();
+            $entityManager->persist($formulaire);
+            $entityManager->flush();
+
+            return $this->redirectToRoute('home');
+        }
+
+        return $this->render('formulaire/newPrestation.html.twig', [
+            'title' => $title,
+            'prestation' => $prestation,
             'formulaire' => $formulaire,
             'form' => $form->createView(),
         ]);
