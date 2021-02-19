@@ -73,4 +73,7 @@ Style : Pas encore décidé
 Symfony : En cours de dev
 Entities OK
 CRUD OK
-Templates nOK (Dans article faire apparaitre la liste des commentaires et dans commentaires faire apparaitre l'id/le titre de l'article commenté)
+Templates nOK 
+
+Form : OK lien sur homepage renvoie un formulaire different à chaque
+Commentaires : Requette dans le commentaireRepo ne renvoie que le premier commentaires...
