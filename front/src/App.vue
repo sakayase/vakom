@@ -1,16 +1,18 @@
 <template>
   <div id="app">
-    <Conseil />
+    <Contact />
   </div>
 </template>
 
 <script>
 import Conseil from './components/Conseil.vue'
+import Contact from './components/Contact.vue'
 
 export default {
   name: 'App',
   components: {
-    Conseil
+    Conseil,
+    Contact
   }
 }
 </script>
