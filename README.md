@@ -75,5 +75,5 @@ Entities OK
 CRUD OK
 Templates nOK 
 
-Form : OK lien sur homepage renvoie un formulaire different à chaque
-Commentaires : Requette dans le commentaireRepo ne renvoie que le premier commentaires...
+
+
