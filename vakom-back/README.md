@@ -28,5 +28,3 @@ Créer la newsletter qui envoie un mail à chaque article publié
 *(swiftmailer ?)*  
   
 Rajouter une thumbnail pour les articles
-
-fixtures
