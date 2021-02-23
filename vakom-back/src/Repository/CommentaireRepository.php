@@ -22,14 +22,17 @@ class CommentaireRepository extends ServiceEntityRepository
     /**
      * @return Commentaire[] Returns an array of Commentaire objects
      */
-    public function findByArticleId($id)
+    public function findByArticleId(int $id)
     {
-        return $this->createQueryBuilder('article_id')
-            ->andWhere('article_id = :val')
-            ->setParameter('val', $id)
-            ->getQuery()
-            ->getResult()
-        ;
+        $conn = $this->getEntityManager()->getConnection();
+
+        $sql = '
+            SELECT * FROM commentaire c
+            WHERE c.article_id = :id';
+        $stmt = $conn->prepare($sql);
+        $stmt->execute(['id' => $id]);
+
+        return $stmt->fetchAllAssociative();
     }
     
 
