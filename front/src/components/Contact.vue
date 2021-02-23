@@ -15,17 +15,63 @@
     </header>
     <div>
         <div>
-            <h1>Nos Coordonnées: </h1>
-            <div>
-                <section>
-                    Engagée et enthousiaste, Bénédicte NICOLAS, met à votre service son professionnalisme acquis au travers d’une expérience pluridisciplinaire de 20 ans qui lui confère une vision à 360° de l’entreprise.
-                </section>
-                <section>
-                    VAKOM, c’est aussi une grande variété de compétences, grâce à un réseau implanté sur le territoire national et international, assurant ainsi proximité et agilité pour vous aider à trouver les réponses à vos problématiques.
-                </section>
-            </div>
-
+          <h1>Nos Coordonnées: </h1>
+          <div>
+              <section>
+                  Engagée et enthousiaste, Bénédicte NICOLAS, met à votre service son professionnalisme acquis au travers d’une expérience pluridisciplinaire de 20 ans qui lui confère une vision à 360° de l’entreprise.
+              </section>
+              <section>
+                  VAKOM, c’est aussi une grande variété de compétences, grâce à un réseau implanté sur le territoire national et international, assurant ainsi proximité et agilité pour vous aider à trouver les réponses à vos problématiques.
+              </section>
+          </div>
+          <div>
+            <h2>Telephone:</h2>
+            <p>XX.XX.XX.XX.XX</p>
+          </div>
+          <div>
+             <h2>Adresse:</h2>
+            <p>
+              3517 W. Gray 
+              St. Utica, Pennsylvania 57867
+            </p>
+          </div>
+          <div>
+            <h2>Email</h2>
+            <p>nom@domain.com</p>
+          </div>
         </div>
+        <form 
+          id="form"
+          action="https://vuejs.org/"
+          @submit="checkForm"
+          method="post"
+        >
+          <div class="names">
+            <input type="text" name="" id="" placeholder="Nom">
+            <input type="text" name="" id="" placeholder="Prénom">
+          </div>
+          <div>
+            <input type="text" name="" id="" placeholder="E-mail" class="mail">
+            <input type="text" name="" id="" placeholder="Ville" class="city">
+          </div>
+          <div>
+            <input type="text" name="" id="" placeholder="Nom de la société" class="societe"> 
+            <input type="text" name="" id="" placeholder="Objet"  class="object">
+          </div>
+          <textarea name="" id="" cols="30" rows="10" placeholder="Votre message ici"></textarea>
+          <div>
+            <button type="submit">Envoyer</button>
+            <div class="rgpd">
+              <input type="checkbox" name="" id="rgpd">
+              <label for="rgpd">RGPD</label>
+            </div>
+          </div>
+        </form>
+        <section>
+          <h3>Plan d'acces:</h3>
+          <a href="https://placeholder.com"><img src="https://via.placeholder.com/885x324"></a>
+          
+        </section>
     </div>
     <footer>
       <a href="https://placeholder.com"><img src="https://via.placeholder.com/120"></a>
