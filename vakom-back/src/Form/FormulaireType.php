@@ -22,7 +22,6 @@ class FormulaireType extends AbstractType
                     'choices' => [
                         $options['objet'] => $options['objet']
                     ],
-                    'disabled' => true,
                 ]);
             } else {
                 $builder->add('objet', ChoiceType::class, [
