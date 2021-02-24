@@ -1,8 +1,6 @@
 import Vue from 'vue'
-<<<<<<< HEAD
 import DemoComponent from "./components/test";
 import Conseil from "./components/Conseil";
-=======
 
 // new Vue({
 //     component: {Conseil},
