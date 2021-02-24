@@ -17,17 +17,19 @@
       </ul>
       <div class="header_img"><a href="https://placeholder.com"><img src="https://via.placeholder.com/120" class="header_img__img"></a></div>
     </header>
-    <div>
+    <div class="main_sect">
       <section class="conseil">
         <h1>Conseil</h1>
-        <div>
-        <h2>Description</h2>
-        <p>
-          Accompagnement dans la conduite du changement stratégique et organisationnel, développement des ressources humaines et des compétences (GPEC), qualité de vie au travail, gouvernance d’entreprise
+        <div class="paragraphs">
+        <div class="section2">
+          <h2>Description</h2>
+          <p>
+            Accompagnement dans la conduite du changement stratégique et organisationnel, développement des ressources humaines et des compétences (GPEC), qualité de vie au travail, gouvernance d’entreprise
 
-          Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
-        </p>
-        </div>
+            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
+          </p>
+          </div>
+        
         <div class="section2">
           <h2>Section 2</h2>
           <p>
@@ -37,6 +39,7 @@
             Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. 
             Consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. 
           </p>
+          </div>
         </div>
         <div class="links">
           <a href="tarifs" class="link tarifs">Voir les tarifs</a>
@@ -157,7 +160,7 @@ p {
   margin: auto;
 }
 header {
-  background-color: #ed008c;
+  background-color: #A6CE39;
   color: white;
 }
 .links {
@@ -166,9 +169,10 @@ header {
 .link {
   text-decoration: none;
   color: white;
-  background-color: #ed008c;
+  background-color: #A6CE39;
+  opacity: 50%;
   margin: 10px;
-  border: #ed008c solid 3px;
+  border: #A6CE39 solid 3px;
   border-radius: 6%;
   margin: auto;
 }
@@ -214,6 +218,13 @@ form {
 .form__fields {
   text-align: center;
 }
+button{
+  background-color: #A6CE39;
+  color: white;
+  border: #A6CE39 solid 3px;
+  border-radius: 5px;
+  opacity: 50%;
+}
 .sub_rgpd {
   text-align: start;
   margin-left: 6%;
@@ -237,7 +248,7 @@ width: 90%;
 margin: auto;
 }
 footer {
-  background-color: #ed008c;
+  background-color: #A6CE39;
   color: white;
   display: flex;
   align-items: center;
@@ -274,5 +285,75 @@ ol {
 }
 .section2 {
   margin-bottom: 50px;
+}
+@media screen and (min-width: 900px) {
+.main_sect
+  .info {
+  display: flex;
+}
+.name {
+  width: 42%;
+}
+.surname {
+  width: 42%;
+}
+.mail {
+  width: 42%;
+}
+.societe {
+  width: 86%;
+}
+.object {
+  width: 86%;
+}
+.city {
+  width: 42%;
+}
+footer {
+  height: 200px;
+}
+.ctr {
+  font-size: 1rem;
+  width: 49%;
+  text-align: right;
+}
+.pbaa {
+  font-size: 1rem;
+  width: 50%;
+  margin: 0;
+  padding-left: 0;
+}
+ol {
+  list-style: none;
+  text-align: right;
+  font-size: 1rem;
+  padding: 0;
+  width: 20%;
+  padding-right: 5px;
+}
+.paragraphs {
+  display: flex;
+  justify-content: space-around;
+}
+.section2 {
+  width: 40%;
+}
+.res_img {
+  height: 80px;
+  width: 80px;
+}
+.res_img_a {
+  width: 100px;
+}
+.reseaux {
+width: 20%;
+}
+.footer__img__img {
+  height: 120px;
+  width: 120px;
+}
+.header_img__img {
+  height: 120px;
+}
 }
 </style>

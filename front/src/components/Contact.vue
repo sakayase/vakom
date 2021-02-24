@@ -19,31 +19,35 @@
     </header>
     <div>
         <div class="main_sect">
-          <h1>Nos Coordonnées: </h1>
           <div>
-              <p>
-                  Engagée et enthousiaste, Bénédicte NICOLAS, met à votre service son professionnalisme acquis au travers d’une expérience pluridisciplinaire de 20 ans qui lui confère une vision à 360° de l’entreprise.
-              </p>
-              <p>
-                  VAKOM, c’est aussi une grande variété de compétences, grâce à un réseau implanté sur le territoire national et international, assurant ainsi proximité et agilité pour vous aider à trouver les réponses à vos problématiques.
-              </p>
+            <h1>Nos Coordonnées: </h1>
+            <div class="paragraphs">
+                <p>
+                    Engagée et enthousiaste, Bénédicte NICOLAS, met à votre service son professionnalisme acquis au travers d’une expérience pluridisciplinaire de 20 ans qui lui confère une vision à 360° de l’entreprise.
+                </p>
+                <p>
+                    VAKOM, c’est aussi une grande variété de compétences, grâce à un réseau implanté sur le territoire national et international, assurant ainsi proximité et agilité pour vous aider à trouver les réponses à vos problématiques.
+                </p>
+            </div>
+              <div class="info">
+                <div class="ct">
+                  <h2>Telephone:</h2>
+                  <p>XX.XX.XX.XX.XX</p>
+                </div>
+                <div class="ct">
+                  <h2>Adresse:</h2>
+                  <p>
+                    3517 W. Gray 
+                    St. Utica, Pennsylvania 57867
+                  </p>
+                </div>
+                <div class="ct">
+                  <h2>Email</h2>
+                  <p>nom@domain.com</p>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="ct">
-            <h2>Telephone:</h2>
-            <p>XX.XX.XX.XX.XX</p>
-          </div>
-          <div class="ct">
-             <h2>Adresse:</h2>
-            <p>
-              3517 W. Gray 
-              St. Utica, Pennsylvania 57867
-            </p>
-          </div>
-          <div class="ct">
-            <h2>Email</h2>
-            <p>nom@domain.com</p>
-          </div>
-        </div>
         <form 
           id="form"
           method="post"
@@ -167,6 +171,7 @@ header {
   text-decoration: none;
   color: white;
   background-color: #ed008c;
+  opacity: 50%;
   margin: 10px;
   border: #ed008c solid 3px;
   border-radius: 6%;
@@ -268,5 +273,62 @@ ol {
 }
 .footer__img__img {
   width: 80%;
+}
+button{
+  background-color: #ed008c;
+  color: white;
+  border: #ed008c solid 3px;
+  border-radius: 5px;
+  opacity: 50%;
+}
+
+@media screen and (min-width: 900px) {
+  .info {
+  display: flex;
+}
+.name {
+  width: 41%;
+}
+.surname {
+  width: 41%;
+}
+.mail {
+  width: 41%;
+}
+.city {
+  width: 41%;
+}
+footer {
+  height: 200px;
+}
+.ctr {
+  font-size: 1rem;
+  width: 49%;
+  text-align: right;
+}
+.pbaa {
+  font-size: 1rem;
+  width: 50%;
+  margin: 0;
+  padding-left: 0;
+}
+ol {
+  list-style: none;
+  text-align: right;
+  font-size: 1rem;
+  padding: 0;
+  width: 20%;
+  padding-right: 5px;
+}
+.paragraphs {
+  display: flex;
+  justify-content: space-around;
+}
+p {
+  width: 30%;
+}
+.header_img__img {
+  height: 120px;
+}
 }
 </style>
