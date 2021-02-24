@@ -66,6 +66,8 @@ class FormulaireController extends AbstractController
             $title = 'Coaching';
         } elseif ($prestation == 'conference') {
             $title = 'Conférence';
+        } elseif ($prestation == 'contact') {
+            $title = 'Contact';
         } else {
             throw new HttpException(400, "{$prestation} n'existe pas");
         }
